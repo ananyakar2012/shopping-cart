@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Dashboard</title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+        
+        
+        
+        <center>
+            <h2>Hi <%=user.name%></h2>
+        </center>
+        <h2 style="margin: 20px">Dashboard</h2><hr>
+
+        <div class="container-fluid">
+            <div class="row">
+                <nav class ="navbar bg-dark"><ul class ="nav navbar-nav">
+                    <li class ="nav-item"><a  href="/products/dashboard">Home</a></li>
+                    <li class ="nav-item"><a  href="/products/shopping-list">Shopping list</a></li>
+                    <li class ="nav-item"><a  href="/users">User List</a></li>
+                    <li class ="nav-item"><a  href="/users/logout">Logout</a></li>
+                </ul></nav>
+                <% product.forEach((res) => { %>
+                <div class="col-md-4">
+                    <img src="/images/<%= res.image%>" height="200" /><br />
+                    <span class="panel-title"><%= res.name%> (<%= res.price%>)</span>
+                </div>
+                <% }) %>
+                
+            </div>
+                
+        </div>
+    </body>
+</html>

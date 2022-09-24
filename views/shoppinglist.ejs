@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Shopping List</title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+        
+        <center>
+            <h2>Hi <%=user.name%></h2>
+        </center>
+        <h2 style="margin: 20px">Shopping List</h2><hr>
+
+        <div class="container-fluid">
+            <div class="row">
+                <nav class ="navbar bg-dark"><ul class ="nav navbar-nav">
+                    <li class ="nav-item"><a  href="/products/dashboard">Home</a></li>
+                    <li class ="nav-item"><a  href="/products/shopping-list">Shopping list</a></li>
+                    <li class ="nav-item"><a  href="/users">User List</a></li>
+                    <li class ="nav-item"><a  href="/users/logout">Logout</a></li>
+                </ul></nav>
+                <% if(user.name == 'admin') { %>
+                <div>
+                    <a href="product" class="btn btn-success" role="button">Add new</a>
+                </div>
+                <% } %>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Data</th>
+                        <th>Price</th>
+                    </tr>
+                    </thead>
+                    
+                    <% product.forEach((res) => { %>
+                    <tbody>
+                    <tr>
+                        <td><%= res.id %></td>
+                        <td><%= res.name %></td>
+                        <td><%= res.data %></td>
+                        <td><%= res.price %></td>
+                    </tr>
+                    </tbody>
+                    <% }) %>
+                </table>
+                
+                
+            </div>
+                
+        </div>
+    </body>
+</html>

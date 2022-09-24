@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Add product</title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+        
+        <h2 style="margin: 20px">Shopping List</h2><hr>
+
+        <div class="container-fluid">
+            <div class="row">
+                <nav class ="navbar bg-dark"><ul class ="nav navbar-nav">
+                    <li class ="nav-item"><a  href="/products/dashboard">Home</a></li>
+                    <li class ="nav-item"><a  href="/products/shopping-list">Shopping list</a></li>
+                    <li class ="nav-item"><a  href="/users">User List</a></li>
+                    <li class ="nav-item"><a  href="/users/logout">Logout</a></li>
+                </ul></nav>
+                <form class="form-horizontal" method="post" action="add-user">
+                    <div class="form-group">
+                      <label class="control-label col-sm-2" for="name">Name:</label>
+                      <div class="col-sm-3">
+                        <input type="name" class="form-control" name="name" placeholder="Enter name">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-sm-2" for="email">Email:</label>
+                      <div class="col-sm-3">
+                        <input type="text" class="form-control" name="email" placeholder="Enter price">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="role">Role:</label>
+                        <div class="col-sm-3">
+                          <select class="form-control" name="role">
+                            <option value="normal">Normal</option>
+                            <option value="normal">Admin</option>
+                          </select>
+                          
+                        </div>
+                      </div>
+                    
+                    
+                    <div class="form-group">
+                      <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-default">Submit</button>
+                      </div>
+                    </div>
+                  </form>
+                
+                
+            </div>
+                
+        </div>
+    </body>
+</html>
